@@ -1,0 +1,25 @@
+<div class="container-fluid pt-5">
+  <div class="container">
+    <div class="row my-5">
+      <h1 class="text-center">Which Apple Watch is right for you?</h1>
+    </div>
+    <div class="row">
+        <div *ngFor="let item of products" class="col-4 pointer my-5">
+          <div class="card mx-auto" style="width: 18rem;">
+            <div routerLink="/detail/{{item.id}}">
+              <img src="{{item.img}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-center text-warning m-0">New</p>
+                <h5 class="card-text text-center">{{item.name}}</h5>
+                <p class="card-text text-center text-secondary">From ${{item.price}}</p>
+              </div>
+            </div>
+              <div class="row">
+                <button type="button" (click)="addToCart(item.id)" class="btn col-5 mx-auto btn-primary btn-sm rounded-pill">Add to cart</button>
+              </div>
+            </div>
+          </div>
+      <button type="button" (click)="loadMore()" class="btn col-2 my-5 mx-auto rounded-pill btn-outline-dark">Load more</button>
+    </div>
+  </div>
+  </div>

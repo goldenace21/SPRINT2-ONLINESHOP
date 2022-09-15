@@ -1,0 +1,25 @@
+.em-40 {
+  height: 40em;
+}
+.em-33 {
+  height: 33em;
+}
+
+.header-detail {
+  height: 3em;
+  border-bottom: 1px solid #ccc;
+}
+
+.text-3em {
+  line-height: 3em;
+}
+
+.text-mid {
+  line-height: 2em;
+
+}
+
+button {
+  height: 2.5em;
+}
+

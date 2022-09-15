@@ -1,35 +1,30 @@
-<section class="about_section layout_padding">
-  <div class="container  ">
-    <div class="row">
-      <div class="col-md-6 col-lg-6 ">
-        <div class="img-box">
-          <img src="assets/images/about-img.png" alt="">
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-6 center_box">
-        <div class="detail-box">
-          <div class="heading_container">
-            <h2>
-              Apple watch 2022
-            </h2>
-          </div>
-          <p>
-            <span class="mr-3"><i class="fa-solid fa-battery-full"></i></span> 1 đến 3 ngày sử dụng
-          </p>
-          <p>
-            <span class="mr-3"><i class="fa-solid fa-phone"></i></span> Có thể gọi
-          </p>
-          <p>
-            <span class="mr-3"><i class="fa-solid fa-heart-pulse"></i></span> Nhiều tiện ích sức khỏe
-          </p>
-          <p>
-            <span class="mr-3"><i class="fa-solid fa-tag"></i></span> 10.000.000 đ
-          </p>
-          <a href="">
-            Đặt hàng
-          </a>
-        </div>
+<div class="container-fluid pt-5">
+  <div class="row w-100 header-detail">
+    <div class="col-10 mx-auto">
+      <div class="col-8 mx-auto">
+        <h5 class="text-mid">{{product.name}}</h5>
       </div>
     </div>
   </div>
-</section>
+    <div class="row w-100 ">
+      <div class="col-6 em-40 d-flex align-items-center justify-content-end">
+        <div class="">
+            <img class="em-33" src="{{product.img}}">
+        </div>
+      </div>
+      <div class="px-5 col-6 d-flex justify-content-start">
+        <div class="col-7 mt-5">
+          <p class="text-warning mb-0">New</p>
+          <h5>Apple Watch</h5>
+          <h2>Starlight Aluminum Case with Solo Loop</h2>
+          <p>From ${{product.price}}. per monthfor 24 mo.monthsFootnote*</p>
+          <p>Order now. Available starting 9.16.</p>
+          <p>{{product.detail}}</p>
+          <hr>
+          <div class="row">
+            <button type="button" class="btn col-6 mx-auto rounded-pill btn-outline-dark">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

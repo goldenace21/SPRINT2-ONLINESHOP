@@ -1,0 +1,36 @@
+.navbar {
+  height: 2.8em;
+}
+
+.header-img {
+  height: 100%;
+  margin-top: -100%
+}
+
+.bg-black {
+  /*background-color: #313132;*/
+  background-color: rgba(0,0,0,.9);
+}
+
+
+.height {
+  height: 1.7em;
+}
+
+.text-ccc {
+  color: #d6d6d6 !important;
+  font-size: .85em;
+}
+
+.text-ccc:hover {
+  color: #efefef !important;
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+}
+
+a:hover {
+  cursor: pointer;
+}

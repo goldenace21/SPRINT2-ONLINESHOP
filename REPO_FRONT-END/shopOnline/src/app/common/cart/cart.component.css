@@ -1,0 +1,35 @@
+.text-total {
+  font-size: 3.2em;
+}
+
+.border {
+  border-radius: .6em;
+}
+
+.h-2em {
+  height: 3em;
+}
+
+.btn:focus {
+  outline: none !important;
+  border: none !important;
+}
+
+.cart-item {
+  height: 7em;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.under-line:hover {
+  text-decoration: underline;
+}

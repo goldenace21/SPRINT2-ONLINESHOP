@@ -1,0 +1,21 @@
+.text-ccc {
+  color: #494949;
+}
+
+input {
+  height: 3em;
+  padding-left: 1em;
+}
+
+.border-ccc {
+  border: 1px solid #cccc;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

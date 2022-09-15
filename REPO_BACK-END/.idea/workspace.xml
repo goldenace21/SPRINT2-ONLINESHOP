@@ -1,36 +1,217 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="014c6861-9f60-49f2-a220-f75aa1334567" name="Changes" comment="" />
+    <list default="true" id="269ea3cc-cb8f-481b-a4f0-89ed37657961" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/MyProjectSpringApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/authentication/JwtAuthenticationEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/controller/CategoryRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/controller/ProductRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/controller/RegisterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/controller/UserRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/controller/jwt/AdminRoleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/controller/jwt/CheckLoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/controller/jwt/JwtAuthenticationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/controller/jwt/LogoutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/dto/ProductDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/dto/RegisterRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/filter/JwtRequestFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/Bill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/Coupon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/Feedback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/ProductCoupon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/ProductOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/Promotion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/account/AppRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/account/AppUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/account/UserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/jwt/JwtRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/model/jwt/JwtResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/repository/IAppUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/repository/ICategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/repository/IProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/repository/IUserRoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/service/CookieService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/service/IAppUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/service/ICategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/service/IProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/service/IUserRoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/service/impl/AppUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/service/impl/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/service/impl/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/service/impl/UserRoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/service/jwt/JwtUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/util/EncrytedPasswordUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/java/com/project/util/JwtTokenUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopOnline/src/test/java/com/example/shoponline/ShopOnlineApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/cart/cart.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/cart/cart.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/cart/cart.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/cart/cart.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/detail/detail.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/detail/detail.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/detail/detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/detail/detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/footer/footer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/footer/footer.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/header/header.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/header/header.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/home/home.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/home/home.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/home/home.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/home/home.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/login/login.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/css/style.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/css/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/about-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/c1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/c2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/contact-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/f1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/f2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/f3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/f4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/slider-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/w1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/w2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/w3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/w4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/w5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/images/w6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/assets/js/jquery-3.4.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="2EQ2K3gwKOUN3NzZS5TnVn8HjTr" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/my_project_spring/my_project_spring">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2EVyDrKMUA52YjDwGuOEZCrrVYk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="MyProjectSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="my_project_spring.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.MyProjectSpringApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.MyProjectSpringApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="014c6861-9f60-49f2-a220-f75aa1334567" name="Changes" comment="" />
-      <created>1662513421053</created>
+      <changelist id="269ea3cc-cb8f-481b-a4f0-89ed37657961" name="Changes" comment="" />
+      <created>1662694936609</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1662513421053</updated>
-      <workItem from="1662513422228" duration="285000" />
+      <updated>1662694936609</updated>
+      <workItem from="1662694943018" duration="6870000" />
+      <workItem from="1662730698570" duration="1806000" />
+      <workItem from="1662804003954" duration="4392000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

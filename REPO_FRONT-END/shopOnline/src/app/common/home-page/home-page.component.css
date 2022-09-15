@@ -1,0 +1,130 @@
+.unicef {
+  height: 4.5em;
+}
+
+.logo-unicef {
+  height: 100%;
+}
+
+.none-deco {
+  text-decoration: none;
+  font-size: .85em;;
+}
+
+.none-deco:hover {
+  text-decoration: blue;
+}
+
+.support-ukraine {
+  line-height: 5em;
+}
+
+.img-cover {
+  object-fit: cover;
+  height: 100% ;
+  width:  100%;
+}
+
+.cover{
+  overflow: hidden;
+  height: 36.25em;
+  width: 100%;
+}
+
+.em-39 {
+  height: 39em;
+}
+
+.color-cover {
+  background-color: #f5f5f7;
+}
+
+
+.scale-up-img-ip {
+  transform: scale(1.5);
+}
+
+.color-cover2 {
+  background-color: #fbfbfd;
+}
+
+.scale-up-img {
+  transform: scale(1);
+}
+
+.em-53 {
+  height: 50em;
+  overflow: hidden;
+}
+
+.font-weight {
+  font-weight: 600;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.big-img {
+  transform: scale(1.2);
+  object-position: 50% 60px;
+}
+
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+.em-60 {
+  height: 50em;
+}
+
+.img-bt {
+  object-position: left bottom;
+}
+
+.text-blue {
+  color: #d678ff;
+}
+
+.b-0 {
+  bottom: 0;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.font-weight-2 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.line-2em {
+  line-height: 2em
+}
+
+
+.text-orange {
+  color: #ff5900;
+}
+
+.text-ccc {
+  color: rgba(114, 114, 114, 0.8);
+}
+
+.line-5em {
+  line-height: 2em;
+}
+
+
