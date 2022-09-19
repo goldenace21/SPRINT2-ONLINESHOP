@@ -28,8 +28,13 @@ public class CartService implements ICartService {
     }
 
     @Override
-    public Cart getCartByPoductAndUser(int idUser, int productId) {
-        return iCartRepository.getCartByPoductAndUser(idUser, productId);
+    public Cart getCartByProductAndUser(int idUser, int productId) {
+        return iCartRepository.getCartByProductAndUser(idUser, productId);
+    }
+
+    @Override
+    public Cart getCartByProduct(int productId) {
+        return iCartRepository.getCartByProduct(productId);
     }
 
     @Override

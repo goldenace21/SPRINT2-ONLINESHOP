@@ -11,11 +11,14 @@ import java.util.List;
 
 @Transactional
 public interface ICartRepository extends JpaRepository<Cart, Integer> {
-    @Query(value = "select * from cart where user_id = :idUser", nativeQuery = true)
+    @Query(value = "select * from cart where user_id = :idUser and delete_status = false", nativeQuery = true)
     List<Cart> getCartById(@Param("idUser") int idUser);
 
     @Query(value = "select * from cart where user_id = :idUser and product_id = :productId", nativeQuery = true)
-    Cart getCartByPoductAndUser(@Param("idUser") int idUser, @Param("productId") int productId);
+    Cart getCartByProductAndUser(@Param("idUser") int idUser, @Param("productId") int productId);
+
+    @Query(value = "select * from cart where product_id = :productId and delete_status = false", nativeQuery = true)
+    Cart getCartByProduct( @Param("productId") int productId);
 
     @Modifying
     @Query(value = "update cart set quantity = quantity + 1 where product_id = :productId and user_id = :idUser", nativeQuery = true)

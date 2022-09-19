@@ -3,6 +3,7 @@ import {ProductService} from "../service/product.service";
 import {Product} from "../model/Product";
 import {ActivatedRoute} from "@angular/router";
 import {CartService} from "../service/cart.service";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-list',
@@ -16,7 +17,7 @@ export class ListComponent implements OnInit {
   cate:string
   username:string;
 
-  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute, private cartService: CartService) { }
+  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute, private cartService: CartService, private toast: ToastrService) { }
 
   ngOnInit() {
     this.username = sessionStorage.getItem("username");
@@ -30,7 +31,12 @@ export class ListComponent implements OnInit {
   }
 
   addToCart(id: number) {
-    this.cartService.addToCard(id,this.username).subscribe();
+    this.cartService.addToCard(id,this.username).subscribe(
+      value => {this.toast.success("added new successfully")},
+      error => {this.toast.error("can't add to card")}
+    )
+
+
   }
 
   loadMore() {

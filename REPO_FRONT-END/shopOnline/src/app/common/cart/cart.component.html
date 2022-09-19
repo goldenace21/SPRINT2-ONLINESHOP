@@ -5,17 +5,33 @@
 </div>
 <hr class="m-0">
 <div class="container pb-5">
-  <p class="h1 mt-4 text-total text-center">Your bag total is ${{totalPrice}}</p>
+  <p class="h1 mt-4 text-total text-center">Your bag total is {{totalPrice | currency}}</p>
   <p class="text-center mt-4 h5">Get free shipping and free returns on orders.</p>
   <div class="row my-4 d-flex justify-content-center">
     <div class="col-4">
-      <button class="btn w-100 h-2em border btn-dark" type="submit">Check Out with Apple Pay</button>
+      <button class="btn w-100 h-2em btn-dark" type="submit">Check Out with Apple Pay</button>
     </div>
     <div class="col-4">
-      <button class="btn w-100 h-2em border btn-primary" type="submit">Check Out with Paypal</button>
+      <button (click)="pay()" class="btn w-100 h-2em btn-primary" type="submit">Check Out with Paypal</button>
+      <button hidden type="button" id="modal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div id="paypal-button-container"></div>
+              <button hidden id="close-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <hr class="mt-5 mb-4 col-10 mx-auto">
+  <div *ngIf="totalPrice == 0" class="col-10 mx-auto">
+    <img class="w-100" src="assets/img_product/apple-new-arrivals-checkout-201804.jfif">
+  </div>
   <div *ngFor="let item of cart">
     <div class="row mb-4 col-10 mx-auto cart-item">
       <div class="col-3 h-100">
@@ -35,10 +51,12 @@
       </div>
       <div class="col-3 d-flex justify-content-end align-items-center">
         <div class="col-3 mt-4 ">
-          <p class="h2">${{item.productItem.price * item.quantity}}</p>
+          <p class="h2">{{item.productItem.price * item.quantity | currency}}</p>
           <p (click)="remove(item.productItem.id)" class="h6 px-3 pointer under-line text-primary"><a>Remove</a></p>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+

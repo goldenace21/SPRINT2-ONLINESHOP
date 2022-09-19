@@ -45,14 +45,10 @@
             <li *ngIf="role==='admin'" class="nav-item">
               <small><a routerLink="" class="nav-link text-ccc mx-3" href="#">admin</a></small>
             </li>
-            <li *ngIf="role==='customer'" class="nav-item">
-              <small><a routerLink="" class="nav-link text-ccc mx-3" href="#">customer</a></small>
-            </li>
-            <li *ngIf="role==='employee'" class="nav-item">
-              <small><a routerLink="" class="nav-link text-ccc mx-3" href="#">employee</a></small>
-            </li>
             <li class="nav-item">
-              <a routerLink="/cart" class="nav-link text-ccc mx-3" href="#"><i class="bi bi-bag"></i>
+              <a routerLink="/cart" class="nav-link text-ccc mx-3" href="#"><i class="bi position-relative bi-bag">
+                <span *ngIf="checkCart > 0" class="position-absolute top-0 start-100 translate-middle p-1 bg-primary rounded-circle"></span>
+              </i>
                </a>
             </li>
           </ul>

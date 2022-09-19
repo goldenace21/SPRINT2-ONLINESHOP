@@ -1,6 +1,8 @@
 package com.example.shoponlineapi.model;
 
 import com.example.shoponlineapi.model.product.Cart;
+import com.example.shoponlineapi.model.product.Product;
+import com.example.shoponlineapi.model.product.Receipt;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.NaturalId;
 import org.hibernate.validator.constraints.UniqueElements;
@@ -43,6 +45,10 @@ public class User {
     @JsonIgnore
     @OneToOne(mappedBy = "user")
     private Cart cart;
+
+    @OneToMany(mappedBy = "userReceipt")
+    @JsonIgnore
+    private Set<Receipt> receiptSet;
 
     public User(Integer id, String name, String username, String email, String password, Set<Role> roles) {
         this.id = id;
@@ -117,5 +123,13 @@ public class User {
 
     public void setCart(Cart cart) {
         this.cart = cart;
+    }
+
+    public Set<Receipt> getReceiptSet() {
+        return receiptSet;
+    }
+
+    public void setReceiptSet(Set<Receipt> receiptSet) {
+        this.receiptSet = receiptSet;
     }
 }

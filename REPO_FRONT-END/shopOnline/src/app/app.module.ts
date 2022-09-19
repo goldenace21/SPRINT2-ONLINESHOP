@@ -12,17 +12,10 @@ import {HttpClientModule} from "@angular/common/http";
 import {LoginComponent} from "./common/login/login.component";
 import {ListComponent} from "./common/list/list.component";
 import { RegisterComponent } from './common/register/register.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-import {MatIconModule} from "@angular/material/icon";
-import {MatCardModule} from "@angular/material/card";
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatRadioModule} from "@angular/material/radio";
-import {MatCheckboxModule} from "@angular/material/checkbox";
-import {MatSlideToggleModule} from "@angular/material/slide-toggle";
-import {MatButtonModule} from "@angular/material/button";
 import { CartComponent } from './common/cart/cart.component';
+import { Error401Component } from './common/error/error401/error401.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -34,7 +27,8 @@ import { CartComponent } from './common/cart/cart.component';
     DetailComponent,
     ListComponent,
     RegisterComponent,
-    CartComponent
+    CartComponent,
+    Error401Component
   ],
   imports: [
     BrowserModule,
@@ -43,15 +37,12 @@ import { CartComponent } from './common/cart/cart.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatRadioModule,
-    MatCheckboxModule,
-    MatSlideToggleModule,
-    MatButtonModule
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      closeButton: true,
+      progressBar: true,
+      positionClass: 'toast-top-right',
+    }),
   ],
   providers: [
   ],

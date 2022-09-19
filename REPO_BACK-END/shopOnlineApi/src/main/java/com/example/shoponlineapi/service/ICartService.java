@@ -14,7 +14,9 @@ public interface ICartService {
 
     void downQuantity(int idUser,int productId);
 
-    Cart getCartByPoductAndUser(int idUser, int productId);
+    Cart getCartByProductAndUser(int idUser, int productId);
+
+    Cart getCartByProduct(int productId);
 
     void save(Cart cart);
 

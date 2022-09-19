@@ -63,18 +63,21 @@ public class CartController {
         if(user==null || product == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        if(iCartService.getCartByPoductAndUser(user.getId(),id) != null) {
-            Cart cart = iCartService.getCartByPoductAndUser(user.getId(),id);
-            cart.setQuantity(cart.getQuantity()+1);
-            iCartService.save(cart);
-        } else {
+        List<Cart> cartList = iCartService.getCartById(user.getId());
+        for (int i = 0; i < cartList.size(); i++) {
+            if(cartList.get(i).getProductItem().getId() == product.getId()) {
+                Cart cart = cartList.get(i);
+                cart.setQuantity(cart.getQuantity()+1);
+                iCartService.save(cart);
+            }
+        }
+        if (iCartService.getCartByProduct(product.getId()) == null){
             Cart cart = new Cart();
             cart.setQuantity(1);
             cart.setProductItem(product);
             cart.setUser(user);
             iCartService.save(cart);
         }
-
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
