@@ -7,6 +7,8 @@ import {formatDate} from "@angular/common";
 import {ToastrService} from "ngx-toastr";
 import {ActivatedRoute} from "@angular/router";
 import {Product} from "../model/Product";
+import {AngularFireStorage} from "@angular/fire/storage";
+import {finalize} from "rxjs/operators";
 
 @Component({
   selector: 'app-create',
@@ -14,6 +16,11 @@ import {Product} from "../model/Product";
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
+  url: any;
+  msg = '';
+  selectedFile: File = null;
+
+
   id: string;
   name: string;
   detail: string;
@@ -37,12 +44,27 @@ export class CreateComponent implements OnInit {
   constructor(private title: Title,
               private productService: ProductService,
               private toast: ToastrService,
-              private activatedRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute,
+              private storage: AngularFireStorage) {
   }
 
   getCurrentDateTime(): string {
     return formatDate(new Date(), 'yyyy-MM-dd hh:mm:ss', 'en-US');
   }
+
+  onFileSelected(event) {
+    this.selectedFile = event.target.files[0];
+    this.productForm.patchValue({img: this.selectedFile.name});
+    const reader = new FileReader();
+    reader.readAsDataURL(this.selectedFile);
+
+    // tslint:disable-next-line:variable-name
+    reader.onload = (_event) => {
+      this.msg = '';
+      this.url = reader.result;
+    };
+  }
+
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
@@ -70,11 +92,22 @@ export class CreateComponent implements OnInit {
           this.price = String(this.product.price)
           this.productCategory = this.product.productCategory
         });
-
     }
   }
 
   create() {
-    this.productService.save(this.productForm.value).subscribe(value => this.toast.success("create successfully"))
+    const nameImg = this.getCurrentDateTime() + this.selectedFile.name;
+    const filePath = `apple/${nameImg}`;
+    const fileRef = this.storage.ref(filePath);
+    this.storage.upload(`apple/${nameImg}`, this.selectedFile).snapshotChanges().pipe(
+      finalize(() => {
+        fileRef.getDownloadURL().subscribe((url) => {
+          this.productForm.patchValue({img: url});
+          // console.log(url);
+          // console.log(this.formNews.value);
+          this.productService.save(this.productForm.value).subscribe(value => this.toast.success("create successfully"))
+        });
+      })
+    ).subscribe();
   }
 }

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import {NgModule} from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
@@ -19,7 +18,9 @@ import {ToastrModule} from "ngx-toastr";
 import { ProfileComponent } from './common/profile/profile.component';
 import { TransactionComponent } from './common/transaction/transaction.component';
 import { CreateComponent } from './common/create/create.component';
-
+import {environment} from "../environments/environment";
+import {AngularFireModule} from "@angular/fire";
+import {AngularFireStorage} from "@angular/fire/storage";
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,7 @@ import { CreateComponent } from './common/create/create.component';
     Error401Component,
     ProfileComponent,
     TransactionComponent,
-    CreateComponent
+    CreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +44,7 @@ import { CreateComponent } from './common/create/create.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     ToastrModule.forRoot({
       timeOut: 2000,
       closeButton: true,
@@ -50,8 +52,8 @@ import { CreateComponent } from './common/create/create.component';
       positionClass: 'toast-top-right',
     }),
   ],
-  providers: [
-  ],
+  providers: [AngularFireStorage]
+  ,
   bootstrap: [AppComponent]
 })
 export class AppModule { }

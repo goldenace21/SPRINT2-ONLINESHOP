@@ -5,7 +5,17 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:8080',
-  clientId: 'AYrlHr3V3Czn_E3OY0sPWOJYMASwg7tWbhRAtIna4KvtiUYMrg-dKJpz2dWtI7XG9FTIH-2rkDRpsfLC'
+  clientId: 'AYrlHr3V3Czn_E3OY0sPWOJYMASwg7tWbhRAtIna4KvtiUYMrg-dKJpz2dWtI7XG9FTIH-2rkDRpsfLC',
+  firebaseConfig : {
+    apiKey: "AIzaSyCPclartAVR6oOTVRxPL9e0_podRCuaLts",
+    authDomain: "apple-shop-f82b7.firebaseapp.com",
+    databaseURL: "https://apple-shop-f82b7-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "apple-shop-f82b7",
+    storageBucket: "apple-shop-f82b7.appspot.com",
+    messagingSenderId: "170045934258",
+    appId: "1:170045934258:web:99d95f20c0d227d25397ab",
+    measurementId: "G-D32GY41J5H"
+  }
 };
 
 /*
