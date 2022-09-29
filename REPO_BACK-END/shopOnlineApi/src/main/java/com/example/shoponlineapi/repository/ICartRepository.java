@@ -14,6 +14,9 @@ public interface ICartRepository extends JpaRepository<Cart, Integer> {
     @Query(value = "select * from cart where user_id = :idUser and delete_status = false", nativeQuery = true)
     List<Cart> getCartById(@Param("idUser") int idUser);
 
+    @Query(value = "select * from cart where receipt_id = :receiptId", nativeQuery = true)
+    List<Cart> getCartByReceiptId(@Param("receiptId") int receiptId);
+
     @Query(value = "select * from cart where user_id = :idUser and product_id = :productId", nativeQuery = true)
     Cart getCartByProductAndUser(@Param("idUser") int idUser, @Param("productId") int productId);
 

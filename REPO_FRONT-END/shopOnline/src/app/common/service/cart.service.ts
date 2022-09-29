@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {environment} from "../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 import {BehaviorSubject, Observable} from "rxjs";
-import {Product} from "../model/Product";
 import {Cart} from "../model/Cart";
 
 @Injectable({
@@ -16,6 +15,10 @@ export class CartService {
 
   getCart(username: string): Observable<Cart[]> {
     return this.httpClient.get<Cart[]>(this.API + `/cart?username=${username}`);
+  }
+
+  getCartByReceipt(receiptId: number ): Observable<Cart[]> {
+    return this.httpClient.get<Cart[]>(this.API + `/cart/receipt?receiptId=${receiptId}`);
   }
 
   upQuantity(username: string, idProduct: number): Observable<void> {

@@ -10,3 +10,36 @@
   transform: scale(1.1);
   transition: .3s;
 }
+
+.bg-ccc {
+  background: #f5f5f7;
+}
+
+.text-ccc {
+  color: rgba(115, 115, 115, 0.8);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.h-20 {
+  height: 4em;
+}
+
+.rounded-5 {
+  border-radius: 1em !important;
+}
+
+.border {
+  border-radius: 1.5em !important;
+}
+
+button:focus {
+  outline: none !important;
+  border: none !important;
+}

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {AuthService} from "../service/auth.service";
 import {Route, Router} from "@angular/router";
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,9 @@ export class RegisterComponent implements OnInit {
     roles: new FormControl(['customer'])
   });
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, private title: Title) {
+    this.title.setTitle("Apple - Register")
+  }
 
   ngOnInit() {
   }

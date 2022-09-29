@@ -1,28 +1,79 @@
-<div class="container-fluid pt-5">
-  <div class="row w-100 header-detail">
+<div class="container-fluid pt-5 px-0">
+  <div class="row w-100 header-detail m-0">
     <div class="col-10 mx-auto">
       <div class="col-8 mx-auto">
         <h5 class="text-mid">{{product.name}}</h5>
       </div>
     </div>
   </div>
-    <div class="row w-100 ">
+    <div class="row w-100 m-0 my-5">
       <div class="col-6 em-40 d-flex align-items-center justify-content-end">
-        <div class="">
-            <img class="em-33" src="{{product.img}}">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-center">
+              <img class="em-33" src="{{product.img}}">
+            </div>
+            <div class="col-12 d-flex mt-5">
+              <div class="col-4 d-flex justify-content-center">
+                <i class="bi h3 bi-box-seam"></i>
+              </div>
+              <div class="col-4 d-flex justify-content-center">
+                <i class="bi h2 bi-dropbox"></i>
+              </div>
+              <div class="col-4 d-flex justify-content-center">
+                <i class="bi h4 bi-box2"></i>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="d-flex">
+                <small class="col-4">
+                  <p class=" text-center">Get free delivery.</p>
+                </small>
+                <small class="col-4">
+                  <p class="text-center">Get 3 months of Apple.</p>
+                </small>
+                <small class="col-4">
+                  <p class="text-center">Free and easy returns.</p>
+                </small>
+              </div>
+            </div>
+            <hr>
+            <div class="row mt-4">
+              <i class="bi h4 mx-auto col-1 bi-chat"></i>
+              <small>
+                <p class="text-center mb-1">Have questions about buying an Apple Watch?</p>
+              </small>
+              <small>
+                <a href="#"><p class="text-center">Chat with an Apple Watch Specialist</p></a>
+              </small>
+            </div>
+          </div>
         </div>
       </div>
       <div class="px-5 col-6 d-flex justify-content-start">
-        <div class="col-7 mt-5">
+        <div class="col-7 mt-4 bg-dar ">
           <p class="text-warning mb-0">New</p>
-          <h5>Apple Watch</h5>
+          <h5>{{product.name}}</h5>
           <h2>Starlight Aluminum Case with Solo Loop</h2>
           <p>From ${{product.price}}. per monthfor 24 mo.monthsFootnote*</p>
           <p>Order now. Available starting 9.16.</p>
           <p>{{product.detail}}</p>
           <hr>
-          <div class="row">
-            <button type="button" class="btn col-6 mx-auto rounded-pill btn-outline-dark">Add to cart</button>
+          <div class="bg-ccc p-3 rounded-5">
+            <p class="h4 my-4">Brand size</p>
+            <div class="border-ccc">
+              <div class="my-3">
+                <p class="h5 px-3">One Size</p>
+                <p class="px-3 m-0">Brand fits 130-200mm wrists </p>
+              </div>
+            </div>
+            <div class="row my-5">
+              <button type="button" (click)="addToCart(product.id)" class="btn col-11 mx-auto rounded btn-primary">Add to Bag</button>
+            </div>
+              <small>
+                <p class="m-0">Still deciding?</p>
+                <p>Add this item to a list and easily come back to it later.</p>
+              </small>
           </div>
         </div>
       </div>

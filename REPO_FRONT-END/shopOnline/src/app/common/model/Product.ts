@@ -9,4 +9,5 @@ export interface Product {
   origin: string;
   dateCreate: string;
   productCategory: Category
+  deleteStatus: boolean
 }

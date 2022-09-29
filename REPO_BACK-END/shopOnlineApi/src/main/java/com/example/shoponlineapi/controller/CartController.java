@@ -36,13 +36,32 @@ public class CartController {
         return new ResponseEntity<>(carts, HttpStatus.OK);
     }
 
+    @GetMapping("/receipt")
+    public ResponseEntity<List<Cart>> getCartByReceipt(@RequestParam(name = "receiptId") int receiptId) {
+        List<Cart> carts = iCartService.getCartByReceiptId(receiptId);
+        if(carts.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(carts, HttpStatus.OK);
+    }
+
+
+
     @GetMapping("/up")
     public ResponseEntity<Cart> up(@RequestParam(name = "username") String username, @RequestParam(name = "idProduct") int idProduct) {
         User user = iUserService.findByUsername(username).get();
         if(user==null || iProductService.findProductById(idProduct)==null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        iCartService.upQuantity(user.getId(),idProduct);
+        List<Cart> cartList = iCartService.getCartById(user.getId());
+        for (Cart value : cartList) {
+            if (value.getProductItem().getId() == idProduct) {
+                Cart cart = value;
+                cart.setQuantity(cart.getQuantity() + 1);
+                iCartService.save(cart);
+            }
+        }
+//        iCartService.upQuantity(user.getId(),idProduct);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
@@ -52,7 +71,15 @@ public class CartController {
         if(user==null || iProductService.findProductById(idProduct)==null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        iCartService.downQuantity(user.getId(),idProduct);
+        List<Cart> cartList = iCartService.getCartById(user.getId());
+        for (Cart value : cartList) {
+            if (value.getProductItem().getId() == idProduct) {
+                Cart cart = value;
+                cart.setQuantity(cart.getQuantity() - 1);
+                iCartService.save(cart);
+            }
+        }
+//        iCartService.downQuantity(user.getId(),idProduct);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
@@ -64,10 +91,10 @@ public class CartController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         List<Cart> cartList = iCartService.getCartById(user.getId());
-        for (int i = 0; i < cartList.size(); i++) {
-            if(cartList.get(i).getProductItem().getId() == product.getId()) {
-                Cart cart = cartList.get(i);
-                cart.setQuantity(cart.getQuantity()+1);
+        for (Cart value : cartList) {
+            if (value.getProductItem().getId() == product.getId()) {
+                Cart cart = value;
+                cart.setQuantity(cart.getQuantity() + 1);
                 iCartService.save(cart);
             }
         }
@@ -88,7 +115,13 @@ public class CartController {
         if(user==null || product == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        iCartService.delete(user.getId(),product.getId());
+        List<Cart> cartList = iCartService.getCartById(user.getId());
+        for (Cart cart : cartList) {
+            if (cart.getProductItem().getId() == id) {
+                cart.setDeleteStatus(true);
+                iCartService.save(cart);
+            }
+        }
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

@@ -10,6 +10,8 @@ import java.util.List;
 public interface ICartService {
     List<Cart> getCartById( int idUser);
 
+    List<Cart> getCartByReceiptId(int receiptId);
+
     void upQuantity(int idUser,  int productId);
 
     void downQuantity(int idUser,int productId);

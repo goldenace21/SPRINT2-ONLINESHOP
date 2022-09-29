@@ -18,6 +18,11 @@ public class CartService implements ICartService {
     }
 
     @Override
+    public List<Cart> getCartByReceiptId(int receiptId) {
+        return iCartRepository.getCartByReceiptId(receiptId);
+    }
+
+    @Override
     public void upQuantity(int idUser, int productId) {
         iCartRepository.upQuantity(idUser,productId);
     }

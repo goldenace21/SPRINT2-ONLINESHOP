@@ -1,6 +1,6 @@
-.em-40 {
-  height: 40em;
-}
+/*.em-40 {*/
+/*  height: 40em;*/
+/*}*/
 .em-33 {
   height: 33em;
 }
@@ -21,5 +21,31 @@
 
 button {
   height: 2.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.border-ccc {
+  border: 1px solid #cccccc;
+  border-radius: .7em;
+}
+
+.bg-ccc {
+  background: #f6f6f6;
+}
+
+.rounded-5 {
+  border-radius: .5em;
+}
+
+button {
+  border-radius: .7em !important;
+  height: 2.4em;
 }
 

@@ -15,4 +15,8 @@ export class ReceiptService {
   receipt(username:string): Observable<any> {
     return this.httpClient.get<any>(this.API + `/receipt/add?username=${username}`);
   }
+
+  getList(userName: string, limit: number): Observable<any> {
+    return this.httpClient.get<any>(this.API + `/receipt/list?name=${userName}&limit=${limit}`);
+  }
 }

@@ -7,4 +7,6 @@ public interface IProductService {
     List<Product> findAllAndSearchBYName(String name, Integer limit, Integer cate);
 
     Product findProductById(Integer id);
+
+    void save(Product product);
 }

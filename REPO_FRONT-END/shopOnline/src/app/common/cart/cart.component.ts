@@ -4,6 +4,7 @@ import {CartService} from "../service/cart.service";
 import {paypal, render} from "creditcardpayments/creditCardPayments";
 import {ToastrService} from "ngx-toastr";
 import {ReceiptService} from "../service/receipt.service";
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-cart',
@@ -16,9 +17,10 @@ export class CartComponent implements OnInit {
   cart: Cart[]
   sum=0;
 
-  constructor(private cartService: CartService, private toast: ToastrService, private receiptService: ReceiptService) {
+  constructor(private cartService: CartService, private toast: ToastrService, private receiptService: ReceiptService, private title: Title) {
     this.username = sessionStorage.getItem("username");
     console.log(this.username)
+    this.title.setTitle("Apple - Cart")
   }
 
   ngOnInit() {
@@ -58,7 +60,8 @@ export class CartComponent implements OnInit {
             this.ngOnInit()
           }
         )
-      }});
+      }
+    });
     document.getElementById("modal").click();
   }
 

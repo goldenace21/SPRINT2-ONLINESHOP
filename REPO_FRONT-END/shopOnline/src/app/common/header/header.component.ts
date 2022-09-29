@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {CartService} from "../service/cart.service";
 import {Cart} from "../model/Cart";
 import {AuthGuardAdminCustomerService} from "../service/guard/auth-guard-admin-customer.service";
+import {ReloadService} from "../service/reload.service";
 
 @Component({
   selector: 'app-header',
@@ -14,14 +15,13 @@ export class HeaderComponent implements OnInit {
   role: string;
   checkCart = false;
   username: string;
-  private subscriptionName: Subscription;
 
   constructor(
-    // private logout: LogoutService,
-    // private toastr: ToastrService,
     private router: Router,
     private cartService: CartService,
-    private authGuardAdminCustomer: AuthGuardAdminCustomerService) {
+    private authGuardAdminCustomer: AuthGuardAdminCustomerService,
+    private reload: ReloadService) {
+
   }
 
   ngOnInit(): void {
@@ -39,4 +39,10 @@ export class HeaderComponent implements OnInit {
   readLocalStorage(key: string): string {
     return localStorage.getItem(key);
   }
+
+  goList(cate: number) {
+    this.router.navigate(["/list", cate]);
+    this.reload.changeMessage(cate);
+  }
+
 }

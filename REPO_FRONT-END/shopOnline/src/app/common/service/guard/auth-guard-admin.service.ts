@@ -6,7 +6,7 @@ import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from "
 })
 export class AuthGuardAdminService implements CanActivate{
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     const roles = sessionStorage.getItem("roles");;

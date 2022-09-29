@@ -13,7 +13,7 @@ export class AuthGuardAdminCustomerService implements CanActivate{
     if (roles === 'CUSTOMER' || roles === 'ADMIN') {
       return true;
     } else {
-      this.router.navigateByUrl('/401');
+      this.router.navigateByUrl('/login');
     }
   }
 }

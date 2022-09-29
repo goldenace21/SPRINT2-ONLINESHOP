@@ -22,4 +22,9 @@ public class ProductService implements IProductService {
     public Product findProductById(Integer id) {
         return iProductRepository.findProductById(id);
     }
+
+    @Override
+    public void save(Product product) {
+        iProductRepository.save(product);
+    }
 }

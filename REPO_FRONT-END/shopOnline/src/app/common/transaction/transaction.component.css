@@ -1,0 +1,24 @@
+.h-20 {
+  height: 4em;
+
+}
+
+.row-hover:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+  transition: .2s;
+  background-color: #efefef;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.bg-ccc {
+  background-color: #f6f6f6;
+}
+
+.rounded-5 {
+  border-radius: 1em;
+}
+
+.border {
+  border-radius: 1.5em !important;
+}

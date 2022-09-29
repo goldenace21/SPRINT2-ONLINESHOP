@@ -3,6 +3,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
 import {AuthService} from "../service/auth.service";
 import {Toast, ToastrService} from "ngx-toastr";
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,9 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router,
               private authService: AuthService,
-              private toast: ToastrService) {
+              private toast: ToastrService,
+              private title: Title) {
+    this.title.setTitle("Apple - Login")
   }
 
   ngOnInit(): void {
@@ -37,7 +40,7 @@ export class LoginComponent implements OnInit {
         const tokenStr = 'Bearer ' + value.token;
         sessionStorage.setItem('token', tokenStr);
         sessionStorage.setItem('roles', value.roles[0].authority);
-        this.router.navigateByUrl("/home");
+        history.back();
         this.toast.success("Logged in successfully");
       },
       error => {

@@ -1,7 +1,7 @@
 <header class="container-fluid bg-black">
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="col-8 mx-auto">
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse w-100" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
             <small><a routerLink="/home" class="nav-link text-ccc mx-3" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
@@ -13,19 +13,19 @@
               <small><a class="nav-link text-ccc mx-3" href="#">Store</a></small>
             </li>
             <li class="nav-item">
-              <small><a class="nav-link text-ccc mx-3" href="#">Mac</a></small>
+              <small><a (click)="goList(3)" class="nav-link text-ccc mx-3" >Mac</a></small>
             </li>
             <li class="nav-item">
-              <small><a class="nav-link text-ccc mx-3" href="#">iPad</a></small>
+              <small><a (click)="goList(5)" class="nav-link text-ccc mx-3" >iPad</a></small>
             </li>
             <li class="nav-item">
               <small><a class="nav-link text-ccc mx-3" href="#">iPhone</a></small>
             </li>
             <li class="nav-item">
-              <small><a [routerLink]="['/list', 1]" class="nav-link text-ccc mx-3" href="#">Watch</a></small>
+              <small><a (click)="goList(1)" class="nav-link text-ccc mx-3">Watch</a></small>
             </li>
             <li class="nav-item">
-              <small><a class="nav-link text-ccc mx-3" href="#">AirPods</a></small>
+              <small><a (click)="goList(4)" class="nav-link text-ccc mx-3">AirPods</a></small>
             </li>
             <li class="nav-item">
               <small><a class="nav-link text-ccc mx-3" href="#">TV & Home</a></small>
@@ -39,8 +39,11 @@
             <li class="nav-item">
               <small><a class="nav-link text-ccc mx-3" href="#">Support</a></small>
             </li>
+<!--            <li class="nav-item">-->
+<!--              <small><a class="nav-link text-ccc mx-3" href="#"><i class="bi h6 bi-box-arrow-right"></i></a></small>-->
+<!--            </li>-->
             <li  class="nav-item">
-              <a routerLink="/login" class="nav-link text-ccc mx-3" href="#"><i class="bi h6 bi-person"></i></a>
+              <a routerLink="/transaction" class="nav-link text-ccc mx-3" href="#"><i class="bi h6 bi-person"></i></a>
             </li>
             <li *ngIf="role==='admin'" class="nav-item">
               <small><a routerLink="" class="nav-link text-ccc mx-3" href="#">admin</a></small>

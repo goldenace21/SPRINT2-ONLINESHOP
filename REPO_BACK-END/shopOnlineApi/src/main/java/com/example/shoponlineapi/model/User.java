@@ -1,11 +1,9 @@
 package com.example.shoponlineapi.model;
 
 import com.example.shoponlineapi.model.product.Cart;
-import com.example.shoponlineapi.model.product.Product;
 import com.example.shoponlineapi.model.product.Receipt;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.NaturalId;
-import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;

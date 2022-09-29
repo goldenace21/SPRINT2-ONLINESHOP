@@ -16,6 +16,9 @@ import { CartComponent } from './common/cart/cart.component';
 import { Error401Component } from './common/error/error401/error401.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastrModule} from "ngx-toastr";
+import { ProfileComponent } from './common/profile/profile.component';
+import { TransactionComponent } from './common/transaction/transaction.component';
+import { CreateComponent } from './common/create/create.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import {ToastrModule} from "ngx-toastr";
     ListComponent,
     RegisterComponent,
     CartComponent,
-    Error401Component
+    Error401Component,
+    ProfileComponent,
+    TransactionComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
