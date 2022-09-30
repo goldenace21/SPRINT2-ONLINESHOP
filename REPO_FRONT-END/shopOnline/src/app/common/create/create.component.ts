@@ -20,6 +20,7 @@ export class CreateComponent implements OnInit {
   msg = '';
   selectedFile: File = null;
 
+  imgFire: string = "";
 
   id: string;
   name: string;
@@ -85,11 +86,15 @@ export class CreateComponent implements OnInit {
       this.productService.detail(this.id).subscribe(
         value => {this.product = value;
           console.log("!=0")
-          this.id = String(this.product.id)
-          this.name = this.product.name
-          this.imgPath = this.product.img
-          this.detail = this.product.detail
-          this.price = String(this.product.price)
+          // @ts-ignore
+          document.getElementById("id").value = String(this.product.id)
+          // @ts-ignore
+          document.getElementById("name").value = this.product.name
+          this.imgFire = this.product.img
+          // @ts-ignore
+          document.getElementById("detail").value = this.product.detail
+          // @ts-ignore
+          document.getElementById("price").value = String(this.product.price)
           this.productCategory = this.product.productCategory
         });
     }
@@ -105,7 +110,7 @@ export class CreateComponent implements OnInit {
           this.productForm.patchValue({img: url});
           // console.log(url);
           // console.log(this.formNews.value);
-          this.productService.save(this.productForm.value).subscribe(value => this.toast.success("create successfully"))
+          this.productService.save(this.productForm.value).subscribe(value => {history.back();this.toast.success("create successfully")})
         });
       })
     ).subscribe();

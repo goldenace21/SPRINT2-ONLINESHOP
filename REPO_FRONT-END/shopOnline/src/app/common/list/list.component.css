@@ -43,3 +43,13 @@ button:focus {
   outline: none !important;
   border: none !important;
 }
+
+a {
+  cursor: pointer;
+}
+
+
+a:hover {
+  text-decoration: underline !important;
+  text-decoration-color: #0078f2 !important;
+}

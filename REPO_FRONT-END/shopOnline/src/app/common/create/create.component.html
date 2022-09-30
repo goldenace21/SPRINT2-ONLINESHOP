@@ -12,21 +12,20 @@
       <form [formGroup]="productForm">
         <div class="col-4 mx-auto">
           <div class="form-group mb-4">
-            <input hidden formControlName="id" type="text" class="w-100 rounded border-ccc" placeholder="Id">
-            <input formControlName="name" type="text" class="w-100 rounded border-ccc" placeholder="Name">
+            <input hidden formControlName="id" id="id" type="text" class="w-100 rounded border-ccc" placeholder="Id">
+            <input formControlName="name" type="text" id="name" class="w-100 rounded border-ccc" placeholder="Name">
           </div>
           <div class="form-group">
-<!--            <input id="input-file" (change)="onFileSelected($event)" type="file" name="img" class="w-100 rounded border-ccc" placeholder="Img">-->
-            <label for="file-upload" class="custom-file-upload">
-              Custom Upload
-            </label>
-            <input id="file-upload" type="file" hidden>
+            <img class="preview-img rounded w-100 mb-4 img-fit" [src]="url" *ngIf="url" alt="">
+            <img class="preview-img rounded w-100 mb-4 img-fit" [src]="imgFire" *ngIf="!url" alt="">
+            <label for="file-upload" class="custom-file-upload" >Img</label>
+            <input class="w-100" id="file-upload" (change)="onFileSelected($event)" type="file" hidden>
           </div>
           <div class="form-group mt-4">
-            <textarea  type="text" formControlName="detail" class="w-100 rounded border-ccc" placeholder="Detail"></textarea>
+            <textarea id="detail" type="text" formControlName="detail" class="w-100 rounded border-ccc" placeholder="Detail"></textarea>
           </div>
           <div class="form-group mt-4">
-            <input  type="number" formControlName="price" class="w-100 rounded border-ccc" placeholder="Price">
+            <input id="price" type="number" formControlName="price" class="w-100 rounded border-ccc" placeholder="Price">
           </div>
           <div class="form-group mt-4">
             <select type="productCategory" formControlName="productCategory" class="w-100 h-3 rounded border-ccc" placeholder="Price">

@@ -24,7 +24,6 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.cartService.getCart(this.username).subscribe(
       value => {this.cart = value
         console.log(value)
@@ -55,7 +54,7 @@ export class CartComponent implements OnInit {
       onApprove: (detail) => {
         this.receiptService.receipt(this.username).subscribe(
           value => {
-            this.toast.success("Payment is Successful")
+            this.toast.success("Payment Successfully")
             document.getElementById("close-modal").click()
             this.ngOnInit()
           }

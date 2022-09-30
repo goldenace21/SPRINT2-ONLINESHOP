@@ -35,7 +35,7 @@ import {AngularFireStorage} from "@angular/fire/storage";
     Error401Component,
     ProfileComponent,
     TransactionComponent,
-    CreateComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
