@@ -4,44 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="269ea3cc-cb8f-481b-a4f0-89ed37657961" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/controller/ReceiptController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/model/product/OCA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/model/product/Receipt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/repository/IReceiptRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/service/IReceiptService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/service/impl/ReceiptService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/model/product/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/model/product/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/repository/ICartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/repository/ICartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/service/ICartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/service/ICartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/service/impl/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopOnlineApi/src/main/java/com/example/shoponlineapi/service/impl/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/cart/cart.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/cart/cart.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/cart/cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/cart/cart.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/cart/cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/cart/cart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/home-page/home-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/home-page/home-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/list/list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/list/list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/model/Cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/model/Cart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/service/cart.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/service/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/app/common/service/cart.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/polyfills.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../REPO_FRONT-END/shopOnline/tsconfig.json" afterDir="false" />
-    </list>
+    <list default="true" id="269ea3cc-cb8f-481b-a4f0-89ed37657961" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,6 +82,7 @@
       <workItem from="1662730698570" duration="1806000" />
       <workItem from="1662804003954" duration="4392000" />
       <workItem from="1663582246411" duration="32000" />
+      <workItem from="1664549010553" duration="117000" />
     </task>
     <servers />
   </component>

@@ -20,15 +20,15 @@ export class CreateComponent implements OnInit {
   msg = '';
   selectedFile: File = null;
 
+  checkImgUpdate = false;
+
   imgFire: string = "";
 
   id: string;
   name: string;
   detail: string;
   price: string;
-  imgPath: string;
   product: Product;
-  productCategory: Category;
   categorys: Category[]
   productForm = new FormGroup({
     id: new FormControl(""),
@@ -50,10 +50,11 @@ export class CreateComponent implements OnInit {
   }
 
   getCurrentDateTime(): string {
-    return formatDate(new Date(), 'yyyy-MM-dd hh:mm:ss', 'en-US');
+    return formatDate(new Date(),'yyyy-MM-dd hh:mm:ss', 'en-US');
   }
 
   onFileSelected(event) {
+    this.checkImgUpdate = true;
     this.selectedFile = event.target.files[0];
     this.productForm.patchValue({img: this.selectedFile.name});
     const reader = new FileReader();
@@ -81,26 +82,28 @@ export class CreateComponent implements OnInit {
     console.log(this.id)
     if (this.id == "0") {
       this.id = ""
-      console.log("==0")
     } else {
       this.productService.detail(this.id).subscribe(
-        value => {this.product = value;
+        value => {
+          this.product = value;
           console.log("!=0")
-          // @ts-ignore
-          document.getElementById("id").value = String(this.product.id)
-          // @ts-ignore
-          document.getElementById("name").value = this.product.name
+          console.log(value)
           this.imgFire = this.product.img
-          // @ts-ignore
-          document.getElementById("detail").value = this.product.detail
-          // @ts-ignore
-          document.getElementById("price").value = String(this.product.price)
-          this.productCategory = this.product.productCategory
+          this.productForm.patchValue({id: this.product.id});
+          this.productForm.patchValue({name: this.product.name});
+          this.productForm.patchValue({img: this.product.img});
+          this.productForm.patchValue({detail: this.product.detail});
+          this.productForm.patchValue({price: this.product.price});
+          this.productForm.patchValue({productCategory: this.product.productCategory});
         });
     }
   }
 
   create() {
+    if (this.id != "0" && !this.checkImgUpdate) {
+      this.productService.save(this.productForm.value).subscribe(value => {history.back();this.toast.success("update successfully")})
+      return
+    }
     const nameImg = this.getCurrentDateTime() + this.selectedFile.name;
     const filePath = `apple/${nameImg}`;
     const fileRef = this.storage.ref(filePath);
@@ -108,11 +111,16 @@ export class CreateComponent implements OnInit {
       finalize(() => {
         fileRef.getDownloadURL().subscribe((url) => {
           this.productForm.patchValue({img: url});
-          // console.log(url);
-          // console.log(this.formNews.value);
-          this.productService.save(this.productForm.value).subscribe(value => {history.back();this.toast.success("create successfully")})
-        });
-      })
+          this.productService.save(this.productForm.value).subscribe(value => {
+            history.back();
+            if (this.id != "0") {
+              this.toast.success("update successfully")
+            }
+            this.toast.success("create successfully")})
+          }
+        );
+       }
+      )
     ).subscribe();
   }
 }

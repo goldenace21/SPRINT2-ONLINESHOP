@@ -11,7 +11,7 @@ import java.util.List;
 @Transactional
 public interface IProductRepository extends JpaRepository<Product, Integer> {
 
-    @Query(value = "select * from product where name like %:name and delete_status = 0 and category_id = :cate limit :limit", nativeQuery = true)
+    @Query(value = "select * from product where name like %:name and delete_status = 0 and category_id = :cate order by date_create desc limit :limit ", nativeQuery = true)
     List<Product> findAllAndSearchBYName(@Param("name") String name, @Param("limit") Integer limit, @Param("cate") Integer cate);
 
     @Query(value = "select * from product where id = :id",nativeQuery = true)
