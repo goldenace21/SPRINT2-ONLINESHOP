@@ -53,3 +53,35 @@ a:hover {
   text-decoration: underline !important;
   text-decoration-color: #0078f2 !important;
 }
+
+.input-search {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: #0078f2;
+
+}
+.input-search:focus {
+  border-color: #0078f2;
+  outline: none;
+}
+
+.item-product {
+  width: 4em;
+}
+
+/*.deco-dark:hover {*/
+/*  text-decoration-color: #000000 !important;*/
+/*}*/
+
+.item-product {
+  cursor: pointer;
+}
+
+.item-product:hover a {
+  text-decoration: underline;
+  text-decoration-color: #000000 !important;
+}
+
+
+

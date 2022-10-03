@@ -86,8 +86,6 @@ export class CreateComponent implements OnInit {
       this.productService.detail(this.id).subscribe(
         value => {
           this.product = value;
-          console.log("!=0")
-          console.log(value)
           this.imgFire = this.product.img
           this.productForm.patchValue({id: this.product.id});
           this.productForm.patchValue({name: this.product.name});
@@ -115,12 +113,19 @@ export class CreateComponent implements OnInit {
             history.back();
             if (this.id != "0") {
               this.toast.success("update successfully")
+            } else {
+              this.toast.success("create successfully")
             }
-            this.toast.success("create successfully")})
+            })
           }
         );
        }
       )
     ).subscribe();
   }
+
+  compareFn(c1: any, c2: any): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
+  }
 }
+

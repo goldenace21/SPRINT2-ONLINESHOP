@@ -14,7 +14,7 @@ import {ReloadService} from "../service/reload.service";
 })
 export class ListComponent implements OnInit {
   products: Product[];
-  name="";
+  name: string="";
   limit=6;
   username:string;
   cate :string;
@@ -38,17 +38,25 @@ export class ListComponent implements OnInit {
         this.ngOnInit()
       }
     );
+
   }
 
   ngOnInit() {
     console.log(this.cate)
     this.username = sessionStorage.getItem("username");
     this.roles = sessionStorage.getItem("roles");
-    this.productService.getList(this.name, this.limit,this.cate).subscribe(
-      value => {this.products = value},
-      error => {},
-      () => {}
-    )
+    this.getList();
+  }
+
+  getList() {
+    setTimeout(()=>{
+      this.cate = this.activatedRoute.snapshot.paramMap.get("cate")
+      this.productService.getList(this.name, this.limit,this.cate).subscribe(
+        value => {this.products = value;
+          window.scroll(0,0)
+        }
+      )
+    }, 50);
   }
 
   addToCart(id: number) {
@@ -85,5 +93,18 @@ export class ListComponent implements OnInit {
 
   update(id: number) {
     this.router.navigateByUrl(`/create/${id}`);
+  }
+
+  search() {
+    this.productService.getList(this.name, this.limit, this.cate).subscribe(
+      value => {this.products = value
+      this.ngOnInit()}
+    )
+  }
+
+  listItem(cate:number) {
+    this.router.navigateByUrl("list/" + cate)
+    this.ngOnInit()
+
   }
 }

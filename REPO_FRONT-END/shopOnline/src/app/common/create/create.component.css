@@ -45,3 +45,7 @@ a:hover {
   color: #757575;
   cursor: pointer;
 }
+
+.input-file {
+  margin-top: -1.3em;
+}

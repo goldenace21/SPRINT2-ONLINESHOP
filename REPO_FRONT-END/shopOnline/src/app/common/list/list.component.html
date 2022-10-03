@@ -45,6 +45,38 @@
   </div>
   <div class="container">
     <div class="row my-5">
+      <div class="col-10 mx-auto d-flex justify-content-between">
+        <div class="item-product">
+          <img class="w-100" src="assets/img_product/logo-iphone.png">
+          <a href="#" class="text-dark deco-dark"> <p class="text-center mt-3">iPhone</p></a>
+        </div>
+        <div class="item-product" (click)="listItem(3)">
+          <img class="w-100" src="assets/img_product/logo-mac.png">
+          <a class="text-dark"> <p class="text-center mt-3">Mac</p></a>
+        </div>
+        <div class="item-product" (click)="listItem(5)">
+          <img class="w-100" src="assets/img_product/logo-ipad.png">
+          <a  class="text-dark"> <p class="text-center mt-3">iPad</p></a>
+        </div>
+        <div class="item-product" (click)="listItem(1)">
+          <img class="w-100" src="assets/img_product/logo-watch.png">
+          <a  class="text-dark"> <p class="text-center mt-3">Watch</p></a>
+        </div>
+        <div class="item-product" (click)="listItem(4)">
+          <img class="w-100" src="assets/img_product/logo-airpod.png">
+          <a  class="text-dark"> <p class="text-center mt-3">AirPods</p></a>
+        </div>
+        <div class="item-product">
+          <img class="w-100" src="assets/img_product/music.png">
+          <a  class="text-dark"> <p class="text-center mt-3">Music</p></a>
+        </div>
+        <div class="item-product">
+          <img class="w-100" src="assets/img_product/tv.png">
+          <a  class="text-dark"> <p class="text-center mt-3">TV</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="row my-5">
       <h1 class="text-center m-0">Which
         <span *ngIf="cate == 1">Apple Watch</span>
         <span *ngIf="cate == 3">Mac</span>
@@ -56,6 +88,11 @@
       <div *ngIf="roles =='ADMIN'" class="col-10 row my-2 mx-auto">
         <a>
           <p routerLink="/create/0" class="text-center h5 text-primary m-0">Add new <i class="bi h4 bi-plus"></i></p>
+        </a>
+      </div>
+      <div class="col-10 row my-4 mx-auto">
+        <a>
+          <p class="text-center text-primary m-0"><input type="search" [(ngModel)]="name" (change)="search()" class="input-search"> <i class="bi h5 bi-search"></i></p>
         </a>
       </div>
     </div>
@@ -75,15 +112,15 @@
               </div>
             <div *ngIf="roles =='ADMIN'" class="row d-flex justify-content-center mt-3">
               <div class="col-4">
-                <a (click)="update(item.id)"><p class="text-center text-primary m-0">update <i class="bi bi-pencil-square"></i></p></a>
+                <a (click)="update(item.id)"><p class="text-center text-primary m-0">Update <i class="bi bi-pencil-square"></i></p></a>
               </div>
               <div class="col-4">
-                <a (click)="confirm(item.id)"><p class="text-center text-primary m-0">delete <i class="bi bi-x-square"></i></p></a>
+                <a (click)="confirm(item.id)"><p class="text-center text-primary m-0">Delete <i class="bi bi-x-square"></i></p></a>
               </div>
             </div>
             </div>
           </div>
-    </div>
+      </div>
     <div class="row">
       <button type="button" (click)="loadMore()" class="btn col-1 mb-5 mx-auto rounded-pill btn-outline-dark"><i class="fa-sharp fa-solid fa-chevron-down"></i></button>
     </div>

@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
         console.log(value)
         sessionStorage.setItem('username', this.loginForm.value.username);
         const tokenStr = 'Bearer ' + value.token;
+        console.log(value.token)
         sessionStorage.setItem('token', tokenStr);
         sessionStorage.setItem('roles', value.roles[0].authority);
         history.back();

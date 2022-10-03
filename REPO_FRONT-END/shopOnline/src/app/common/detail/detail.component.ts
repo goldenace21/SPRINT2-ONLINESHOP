@@ -26,8 +26,10 @@ export class DetailComponent implements OnInit {
 
   ngOnInit() {
     this.productService.detail(this.activatedRoute.snapshot.paramMap.get("id")).subscribe(
-      value => {this.product = value}
+      value => {this.product = value;
+        window.scroll(0,0);}
     )
+
   }
 
   addToCart(id: number) {
